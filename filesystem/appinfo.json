@@ -1,0 +1,13 @@
+{
+    "id": "com.fouryousee.filesystem",
+    "version": "1.0.0",
+    "vendor": "4YouSee",
+    "type": "web",
+    "main": "index.html",
+    "title": "4YouSee filesystem API",
+    "appDescription": "",
+    "icon": "icon.png",
+    "largeIcon": "largeIcon.png",
+    "iconColor": "#f1f3f6",
+    "bgColor": "white"
+}

@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>Test All Samsung Apis</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<!-- LG Scripts -->
+	<script type="text/javascript" src="./js/cordova/2.7.0/cordova.webos.js"></script>
+    <script type="text/javascript" src="./js/cordova-cd/1.2/storage.js"></script>
+    <script type="text/javascript" src="./js/cordova-cd/1.2/configuration.js"></script>
+    <script type="text/javascript" src="./js/cordova-cd/1.2/deviceInfo.js"></script>
+
+	<style type="text/css">body {background-color: #fff;padding: 50px;}input {width: 350px;}textarea {font-size: 12px;}	</style>
+
+</head>
+<body>
+	<textarea id="debug" style="display: none; position: absolute; height: 300px; width: 50%; top 20px; right: 20px; top: 20px; z-index: 999999999; background-color: rgba(255, 255, 255, 0.9);"></textarea>
+
+	<!-- FILESYSTEM -->
+
+	<div>
+		<h3>FileSystem</h3>
+		<button id="init">1 init</button>
+		<br />
+		<br />
+		<button id="mkdir" onclick="mkdir()">2 mkdir</button>
+		<input type="text" name="" id="mkdirTxt">
+
+		<br />
+		<br />
+		<button id="rmdir" onclick="rmdir()">3 rmdir</button>
+		<input type="text" name="" id="rmTxt">
+
+		<br />
+		<br />
+		<button id="rmfile" onclick="rmfile()">4 rm</button>
+		<input type="text" name="" id="rmfileTxt">
+
+		<br />
+		<br />
+		<button id="writefile" onclick="writefile()">5 writeFile</button>
+		<input type="text" name="" id="writefileTxt">
+		<input type="text" name="" id="writefileDataTxt">
+
+		<br />
+		<br />
+		<button id="readfile" onclick="readfile()">6 readFile</button>
+		<input type="text" name="" id="readfileTxt">
+
+		<br />
+		<br />
+		<button id="listDir" onclick="listdir()">7 listDir</button>
+		<input type="text" name="" id="listDirTxt">
+
+	</div>
+
+	<!-- DOWNLOADER -->
+
+	<div>
+		<br />
+		<h3>Downloader</h3>
+		<hr />
+		<br />
+		<button id="downloader" onclick="download()">8 downloader</button>
+		<input type="text" name="" id="urlfileTxt" style="width: 450px">
+		<input type="text" name="" id="pathfileTxt">
+
+	</div>
+
+	<!-- UNZIPPER -->
+
+	<div>
+		<br />
+		<h3>Unzipper</h3>
+		<hr />
+		<br />
+		<button id="unzipper" onclick="unzip()">9 Unzipper</button>
+		<input type="text" name="" id="fromTxt" style="width: 450px">
+		<input type="text" name="" id="toTxt">
+
+	</div>
+
+	<script src="js/debug.js"></script>
+	<script src="js/filesystem/js/filesystem.js"></script>
+	<script src="js/unzipper/js/unzipper.js"></script>
+	<script src="js/downloader/js/downloader.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
