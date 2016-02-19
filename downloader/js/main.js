@@ -1,7 +1,7 @@
 var downloader;
-var defaultDir = 'file://internal/4yousee';
+var defaultDir = 'file://internal/example';
 
-urlfileTxt.value = 'http://www.samsungdforum.com/B2B/Guide/_downloads/mixPlaylistApp.zip';
+urlfileTxt.value = 'http://www.example.com/file.zip';
 pathfileTxt.value = defaultDir;
 
 window.onload = function () {

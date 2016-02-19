@@ -1,5 +1,5 @@
 var fs, downloader, unzipper;
-var defaultDir = 'file://internal/4yousee';
+var defaultDir = 'file://internal/example';
 
 mkdirTxt.value = defaultDir;
 rmTxt.value = defaultDir;
@@ -9,8 +9,7 @@ readfileTxt.value = defaultDir + '/teste.txt';
 writefileDataTxt.value = 'vamos lá correr pra casa';
 listDirTxt.value = defaultDir;
 
-// urlfileTxt.value = 'http://www.uaiti.com.br/downloads/image.zip';
-urlfileTxt.value = 'http://4usee.com/demonstracao/7F3254/common/templates/31.zip';
+urlfileTxt.value = 'http://www.example.com/file.zip';
 pathfileTxt.value = defaultDir;
 
 fromTxt.value = defaultDir + '/image.zip';

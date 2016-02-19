@@ -1,7 +1,7 @@
 var unzipper;
-var defaultDir = 'file://internal/4yousee';
+var defaultDir = 'file://internal/example';
 
-fromTxt.value = defaultDir + '/mixPlaylistApp.zip';
+fromTxt.value = defaultDir + '/file.zip';
 toTxt.value = defaultDir;
 
 window.onload = function () {

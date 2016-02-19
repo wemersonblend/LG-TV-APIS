@@ -1,5 +1,5 @@
 var fs;
-var defaultDir = 'file://internal/4yousee';
+var defaultDir = 'file://internal/example';
 
 mkdirTxt.value = defaultDir;
 rmTxt.value = defaultDir;

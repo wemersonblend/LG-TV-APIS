@@ -3,10 +3,10 @@ ares-package . -e .git
 
 echo ''
 echo 'Installing app ...'
-ares-install -d emulator ./com.fouryousee.filesystem*.ipk -
+ares-install -d emulator ./com.example.filesystem*.ipk -
 
 echo 'Launching app ...'
-ares-launch --inspect com.fouryousee.filesystem
+ares-launch --inspect com.example.filesystem
 
 echo ''
 echo 'done!'

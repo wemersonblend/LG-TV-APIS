@@ -6,10 +6,10 @@ ares-package . -e .git
 
 echo ''
 echo 'Installing app ...'
-ares-install -d emulator ./com.fouryousee.apis*.ipk -
+ares-install -d emulator ./com.example.apis*.ipk -
 
 echo 'Launching app ...'
-ares-launch --inspect com.fouryousee.apis
+ares-launch --inspect com.example.apis
 
 echo ''
 echo 'done!'
