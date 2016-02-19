@@ -1,7 +1,7 @@
 
 # LG-TV-APIS
 
-Generic Apis implemented to LG Signage WebOS applications
+Generic Apis implemented to LG WebOS Signage applications
 
 
 [Filesystem API](#filesystem-api)
