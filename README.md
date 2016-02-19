@@ -4,8 +4,8 @@
 Generic Apis implemented to LG WebOS Signage applications
 
 
-[Filesystem API](#filesystem-api)
-[Download API](#download-api)
+[Filesystem API](#filesystem-api) -
+[Download API](#download-api) -
 [Unzip API](#unzip-api)
 
 <a href="#" name="filesystem-api"></a>
