@@ -24,7 +24,8 @@
 
         var TO_PATH,
             FROM_URL,
-            filename;
+            filename,
+            that = this;
 
         TO_PATH = options.path;
         FROM_URL = options.url;
@@ -32,29 +33,44 @@
         filename = extractFileFromPath(TO_PATH);
         if(!filename) {
             filename = extractFileFromPath(FROM_URL);
-            TO_PATH = TO_PATH + '/' + filename;
+            TO_PATH = TO_PATH + '/' + filename.split("?")[0];
         }
 
         if(!FROM_URL || !TO_PATH)
             return callback({message: 'invalid arguments. Required {url:"", path: ""}'});
 
-        var onSuccess = function (data){
-            if(typeof callback == 'function')
+
+        var onSuccessMove = function(data) {
+            if(typeof callback == 'function') {
                 callback(null, {success: true});
+            }
         };
 
-        var onError = function (error){
+        var onErrorMove = function() {
+            if(typeof callback == 'function')
+                callback(getError(error), null);
+        };
+
+        var onSuccessDownload = function (data){
+            var options = {
+                oldPath: normalizePath(TO_PATH) + '.tmp',
+                newPath : normalizePath(TO_PATH)
+            };
+
+            that.STORAGE.moveFile( onSuccessMove , onErrorMove , options );
+        };
+
+        var onErrorDownload = function (error){
             if(typeof callback == 'function')
                 callback(getError(error), null);
         };
 
         options = {
             source: FROM_URL,
-            destination: normalizePath(TO_PATH)
+            destination: normalizePath(TO_PATH) + '.tmp'
         };
 
-        this.STORAGE.copyFile( onSuccess , onError , options );
-
+        that.STORAGE.copyFile( onSuccessDownload , onErrorDownload , options );
     }
 
     /**
